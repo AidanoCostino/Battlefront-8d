@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battlefront 8D</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="app.js"></script>
+</head>
+<body>
+    <div class="startup-menu">
+        <h1>Startup Menu</h1>
+        <form id="startup-form">
+            <label for="num-teams">Number of Teams:</label>
+            <input type="number" id="num-teams" name="num-teams" min="1" required>
+    
+            <label for="grid-width">Grid Width:</label>
+            <input type="number" id="grid-width" name="grid-width" min="1" required>
+
+            <label for="grid-length">Grid Length:</label>
+            <input type="number" id="grid-length" name="grid-length" min="1" required>
+    
+            <label for="team-size">Starting Size of Each Team:</label>
+            <input type="number" id="team-size" name="team-size" min="1" required>
+    
+            <label for="start-together">Teams Start Together:</label>
+            <input type="checkbox" id="start-together" name="start-together">
+    
+            <button type="submit">Start Game</button>
+        </form>
+    </div>
+
+    <div id="game-container" class="game-container">
+        <div id="team-control-display" class="team-control-display"></div>
+        <div id="game-grid" class="game-grid" style="display: none;"></div>
+        <div class="controls">
+            <label for="speed-slider">Simulation Speed:</label>
+            <input type="range" id="speed-slider" name="speed-slider" min="1" max="1000" value="500">
+        </div>
+    </div>
+</body>
+</html>
